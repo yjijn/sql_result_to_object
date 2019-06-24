@@ -1,7 +1,7 @@
-# sql_result_to_object
+# Illustration
 Translate Mysql search result to an object which like ORM search result. 
 
-database like this:
+database :
 
 | id   | name  |
 | ---- | ----- |
@@ -9,9 +9,23 @@ database like this:
 | 2    | Jack  |
 | 3    | Tom   |
 
+useing class SqlObjLIst(),we can get the sql result as ORM serch result.
+
+for example:
+
+```pyhon
+sql_result = SqlObjList(cursor).result# cursor is SQL search reslut
+for result in sql_result:
+	print(result.name)
+	#print result:
+	#yjijn
+	#Jack
+	#Tom
+```
 
 
-and run "sql_obj_result.py" will get printing like this:
+
+run "sql_obj_result.py" will get printing like this:
 
 ```json
 <class 'list'>
